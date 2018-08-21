@@ -19,7 +19,7 @@ var app3 = new Vue({
     }
 })
 
-
+//循环
 var app4 = new Vue({
     el: '#app-4',
     data: {
@@ -31,6 +31,7 @@ var app4 = new Vue({
     }
 })
 
+//绑定时间v-on：
 var app5 = new Vue({
     el: '#app-5',
     data: {
@@ -43,6 +44,7 @@ var app5 = new Vue({
     }
 })
 
+//双向绑定
 var app6 = new Vue({
     el: '#app-6',
     data: {
@@ -93,7 +95,23 @@ var vm = new Vue({
     },
     methods:{
         getNewDate:function(){
+            this.message = String(Date.now());
             this.methodsDate = Date.now();
+        }
+    }
+})
+
+//class与style绑定
+Vue.component('my-component', {
+    template: '<p class="foo bar">Hi</p>'
+})
+var app8 = new Vue({
+    el: '#app-9',
+    data:{
+        isActive:true,
+        styleObject:{
+            color:'red',
+            fontSize:'30px'
         }
     }
 })

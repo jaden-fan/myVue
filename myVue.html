@@ -8,14 +8,17 @@
     <div id="app">
         {{ message }}
     </div>
+    <!-- 绑定属性 -->
     <div id="app-2">
         <span v-bind:title="message">
             鼠标悬停几秒钟查看此处动态绑定的提示信息！
         </span>
     </div>
+    <!-- 条件 -->
     <div id="app-3">
         <p v-if="seen">现在你看到我了</p>
     </div>
+    <!-- 循环 -->
     <div id="app-4">
         <ol>
             <li v-for="todo in todos">
@@ -57,7 +60,11 @@
         <p>Methods newDate: "{{ methodsDate }}"</p>
         <button v-on:click="getNewDate">getNewDate</button>
     </div>
+
+    <!-- class与style绑定 -->
+    <div id="app-9">
+        <my-component class="baz boo" v-bind:class="{active: isActive}" v-bind:style="styleObject"></my-component>
+    </div>
 </body>
 <script src="./myVue.js"></script>
-
 </html>
